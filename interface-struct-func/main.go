@@ -27,11 +27,30 @@ func main() {
 
 	// Jawaban No 1
 
+	fmt.Println("============== Jawaban No 1 ==============")
+
 	car := Car{
 		Brand: "Civic",
 		Year: 2019,
 	}
 
-	fmt.Println("============== Jawaban No 1 ==============")
 	fmt.Println(car.Drive())
+
+	fmt.Println("============== Jawaban No 2 ==============")
+
+	animal := Animal{
+		Species: "Wolf",
+		Sound: "auuuuuu",
+	}
+
+	fmt.Println(animal.MakeSound())
+
+	fmt.Println("============== Jawaban No 3 ==============")
+
+	area := Rectangle{
+		Length: 20,
+		Width: 5,
+	}
+
+	fmt.Println(area.CountArea())
 }

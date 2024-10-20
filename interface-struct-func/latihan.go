@@ -23,10 +23,41 @@ type Car struct {
 	Year int
 }
 
-type Drive interface {
+type Driver interface {
 	Drive() string
 }
 
 func (c Car) Drive() string {
 	return fmt.Sprintf("%s is Brand that has been publish at %d", c.Brand, c.Year)
+}
+
+// Jawaban No 2
+
+type Animal struct {
+	Species string
+	Sound string
+}
+
+type SoundMaker interface {
+	MakeSound() string
+}
+
+func (a Animal) MakeSound() string {
+	return fmt.Sprintf("the sound of %s is %s", a.Species, a.Sound)
+}
+
+// Jawaban No 3
+
+type Rectangle struct {
+	Length int
+	Width int
+}
+
+type CountArea interface {
+	Area() int
+}
+
+func (r Rectangle) CountArea() int {
+	
+	return r.Length * r.Width
 }
