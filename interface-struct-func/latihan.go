@@ -57,7 +57,46 @@ type CountArea interface {
 	Area() int
 }
 
-func (r Rectangle) CountArea() int {
+func (r Rectangle) Area() int {
 	
 	return r.Length * r.Width
+}
+
+// Jawaban NO 4
+
+type Vehicle interface {
+	Speed() int
+}
+
+type Bike struct {
+	Brand string
+	MaxSpeed int
+}
+
+type Boot struct {
+	Brand string
+	MaxSpeed int
+}
+
+func (b Bike) Speed() int {
+	return b.MaxSpeed
+}
+
+func (bo Boot) Speed() int {
+	return bo.MaxSpeed
+}
+
+// Jawaban No 5
+
+type Book struct {
+	Title string
+	Author string
+}
+
+type Detail interface {
+	getDetails() string
+}
+
+func (b Book) getDetails() string {
+	return fmt.Sprintf("the %s is written by %s", b.Title, b.Author)
 }

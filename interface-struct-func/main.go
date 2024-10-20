@@ -46,11 +46,37 @@ func main() {
 	fmt.Println(animal.MakeSound())
 
 	fmt.Println("============== Jawaban No 3 ==============")
-
+	
 	area := Rectangle{
 		Length: 20,
 		Width: 5,
 	}
+	
+	fmt.Println(area.Area())
+	
+	fmt.Println("============== Jawaban No 4 ==============")
 
-	fmt.Println(area.CountArea())
+	boot := Boot{
+        Brand: "Toyota",
+        MaxSpeed: 180,
+    }
+
+    // Inisialisasi struct Bike
+    bike := Bike{
+        Brand: "Yamaha",
+        MaxSpeed: 100,
+    }
+
+    // Memanggil metode Speed dari Car dan Bike
+    fmt.Printf("The %s car can go up to %d km/h.\n", boot.Brand, boot.Speed())
+    fmt.Printf("The %s bike can go up to %d km/h.\n", bike.Brand, bike.Speed())
+
+	fmt.Println("============== Jawaban No 5 ==============")
+
+	book := Book{
+		Title: "Tenggelamnya Kapal Van der wick",
+		Author: "Fikri",
+	}
+
+	fmt.Println(book.getDetails())
 }
